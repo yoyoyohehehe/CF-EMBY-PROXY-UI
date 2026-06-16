@@ -11387,10 +11387,7 @@ function renderLandingPage(env, initHealth = buildInitHealth(env)) {
           <div class="inline-flex items-center rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold tracking-[0.16em] uppercase text-brand-300">Headless Edge Relay</div>
           <h1 class="mt-5 text-3xl md:text-4xl font-bold text-white leading-tight">Emby Proxy V18.7</h1>
           <p class="mt-4 text-sm md:text-base leading-7 text-slate-300">为了极致优化视频代理的性能，当前根路径默认只保留一个无头（Headless）数据中继站；真正的管理界面、节点控制和 DNS 运维都收敛到单独的管理台入口。</p>
-          <p class="mt-3 text-sm md:text-base leading-7 text-slate-400">如果你现在需要配置节点、查看运行状态或调整 Cloudflare 相关参数，请直接访问 <span class="font-semibold text-white">${escapeHtml(adminPath)}</span>。</p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="${escapeHtml(adminPath)}" class="inline-flex items-center justify-center rounded-2xl border border-brand-400/70 bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-950/20 transition hover:border-brand-300 hover:bg-brand-700">访问 ${escapeHtml(adminPath)}</a>
-            <a href="https://github.com/axuitomo/CF-EMBY-PROXY-UI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-2xl border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800 transition">查看项目说明</a>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">  
           </div>
         </div>
         <div class="border-t md:border-t-0 md:border-l border-slate-800 bg-slate-950/80 p-8 md:p-10 text-left">
@@ -11398,8 +11395,6 @@ function renderLandingPage(env, initHealth = buildInitHealth(env)) {
             <div class="text-xs font-semibold tracking-[0.16em] uppercase text-slate-500">Routing Notes</div>
             <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-300">
               <li>• 根路径仅提供静态说明页，不承载实时配置数据。</li>
-              <li>• \`${escapeHtml(adminPath)}\` 下发 SaaS 控制台骨架，动态数据继续走 \`POST ${escapeHtml(adminPath)}\` API。</li>
-              <li>• 媒体代理、日志与 KV / D1 逻辑保持原 Worker 主链路不变。</li>
             </ul>
           </div>
         </div>
